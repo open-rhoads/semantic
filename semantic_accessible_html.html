@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Semantic HTML for Accessibility</title>
+</head>
+<body>
+  <header>
+    <h1 tabindex="0">Web Accessibility</h1>
+    <nav>
+      <ul role="menu navigation" aria-label="Semantic HTML">
+        <li><a role="menuitem" href="#login">Skip to Login</a></li>
+        <li><a role="menuitem" href="#main-content">Skip to Content</a></li>
+        <li><a role="menuitem" href="#">Home</a></li>
+        <li><a role="menuitem" href="#">Events</a></li>
+        <li><a role="menuitem" href="#">About</a></li>
+        <li><a role="menuitem" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section role="form" id="login">
+      <h2 tabindex="0">Member Login:</h2>
+      <form tabindex="0">
+        <label tabindex="0" for="username">Username: </label><input role="textbox" type="text" name="username" id="username" />
+        <label tabindex="0" for="email">Email Address: </label><input role="textbox" type="email" name="email" id="email" />
+        <input role="button" type="submit" value="Login" />
+      </form>
+    </section>
+    <section id="main-content">
+      <h2 tabindex="0">Web Accessibility Benefits Everyone</h2>
+      <p tabindex="0">Welcome to the world of semantic HTML, where markup has meaning.
+        Using semantic HTML gives our pages better organization and ensures
+        that they can be accessed by everyone. This page may not look very
+        impressive, but its HTML contains specific information about its
+        components for improved usability.
+      </p>
+      <figure tabindex="0" itemscope itemtype="https://schema.org/ImageObject">
+        <img itemprop="thumbnail" src="semantic.png" /><br />
+        <!-- The element below would be hidden visually, if CSS were employed -->
+        <span itemprop="embeddedTextCaption">Ambiguous Structure with multiple <code>div</code>
+          elements, a.k.a. "div soup" compared to identifiable sections such as
+          <code>header</code>, <code>article</code>, <code>figure</code>, & <code>footer</code> elements, a.k.a. sematic markup</span>
+        <figcaption tabindex="0" itemprop="caption">With semantic HTML, we can remove much of the ambiguity
+        that can otherwise exist in a webpage.</figcaption>
+      </figure>
+    </section>
+    <section tabindex="0" role="region" id="about" itemscope itemtype="http://schema.org/Person">
+      <h2 tabindex="0">About the Author</h2>
+      <p tabindex="0">This demonstration has been built by:<br />
+        <strong tabindex="0" itemprop="name">Mikaela <span itemprop="familyName">Rhoads</span></strong><br />
+        <span tabindex="0" itmeprop="jobTitle">Software Trainer, Student & Front End Web Developer</span><br />
+        <a itemprop="email" href="mailto:mgrhoads321@gmail.com">mgrhoads321@gmail.com</a>
+        <address tabindex="0" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">2000 Camino Del Este</span><br />
+        <span itemprop="addressLocality">San Diego</span>,
+        <abbr itemprop="addressRegion" title="califonia">CA</abbr>
+        <span itemprop="postalCode">92108</span>
+        </address>
+      </p>
+    </section>
+    <aside tabindex="0">
+      <h2>Ad</h2>
+      <img src="" />This is where an advertisement might go.
+    </aside>
+  </main>
+  <footer tabindex="0">
+    <p><a href="#">Back to Top</a></p>
+    <small>
+      <a href="#" rel="copyright">&copy;2021 Open Rhoads Web Development</a>
+    </small>
+  </footer>
+</body>
+</html>
